@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!--Style-->
+    <link rel="stylesheet" href="style.css" />
+    <title>JS Countdown</title>
+  </head>
+  <body>
+    <div class="background-header"></div>
+    <main>
+      <div class="container">
+        <div class="timer-container">
+          <h1>READY TO LAUNCH IN...</h1>
+          <div class="timer">
+            <div class="time">
+              <small>Dias</small>
+              <h2 id="days"></h2>
+            </div>
+            <span>:</span>
+            <div class="time">
+              <small>Horas</small>
+              <h2 id="hours"></h2>
+            </div>
+            <span>:</span>
+            <div class="time">
+              <small>Minutos</small>
+              <h2 id="minutes"></h2>
+            </div>
+            <span>:</span>
+            <div class="time">
+              <small>Segundos</small>
+              <h2 id="seconds"></h2>
+            </div>
+          </div>
+          <p>Inscreva-se para saber mais sobre o lançamento</p>
+          <button id="btn-open-modal" class="btn btn-submit">
+            Inscreva-se
+          </button>
+        </div>
+        <div class="image-container">
+          <div class="image">
+            <img src="images/rocket.svg" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="background-bottom"></div>
+    <div class="modal hidden">
+      <form class="subscribe-form">
+        <span id="btn-close-modal" class="btn btn-close">X</span>
+        <label>Digite seu nome...</label>
+        <input id="name-input" type="text" required />
+        <label>Digite seu email...</label>
+        <input id="email-input" type="email" required />
+        <p id="message"></p>
+        <button id="btn-submit" class="btn btn-submit">Inscreva-se</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

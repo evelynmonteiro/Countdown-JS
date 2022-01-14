@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+:root {
+  --black: #4d4c59;
+  --purple: #6c63ff;
+  --light-grey: #c8c8c8;
+  --text-color: #9c9ab6;
+  --white: #f0f0f0;
+}
+
+body {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* BUTTONS */
+
+.btn {
+  background-color: var(--purple);
+  color: var(--white);
+  border: none;
+  box-shadow: 0px 1px 5px var(--black);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #5d55f3;
+  box-shadow: none;
+}
+
+.btn-submit {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(10px, -12px);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 46% 54% 35% 65% / 61% 37% 63% 39%;
+  cursor: pointer;
+}
+
+/* LAYOUT */
+
+.background-header {
+  height: 20vh;
+  background-image: url("images/top-image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.background-bottom {
+  height: 20vh;
+  background-image: url("images/bottom-image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.5rem;
+}
+
+.timer-container {
+  flex-basis: 55%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-container h1 {
+  font-size: 2.25rem;
+  letter-spacing: 3px;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+
+.timer-container p {
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.timer-container .timer {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.timer-container .timer span {
+  font-size: 4rem;
+  color: var(--black);
+}
+
+.timer-container .timer .time {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-container .timer .time small {
+  color: var(--light-grey);
+}
+
+.timer-container .timer .time h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  color: var(--black);
+}
+
+.image-container .image img {
+  width: 100%;
+}
+
+/* MODAL */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal {
+  width: 90%;
+  max-width: 500px;
+  padding: 3rem 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  /* backdrop-filter: blur(3px); */
+  border-radius: 20px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal form {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.modal form label {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--purple);
+}
+
+.modal form input {
+  width: 50%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px var(--black);
+  text-align: center;
+}
+
+.modal form #message {
+  height: 1.5rem;
+}
+
+.modal form input:focus {
+  outline: 1px solid var(--purple);
+}
+
+@media (max-width: 1020px) {
+  .timer-container .timer {
+    gap: 1rem;
+  }
+
+  .timer-container .timer span,
+  .timer-container .timer .time h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 968px) {
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .timer-container .timer .time {
+    width: 100%;
+  }
+}
+
+@media (max-width: 385px) {
+  .timer-container .timer {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 335px) {
+  .timer-container .timer {
+    flex-direction: column;
+  }
+
+  .timer-container .timer span {
+    display: none;
+  }
+}
