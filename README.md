@@ -14,7 +14,7 @@
 
 This is the solution to the challenge proposed in Discover - Rockeseat. In addition, I also made a modal with an interactive registration form and also made the page as responsive as possible.
 
-<a href="https://evelynmonteiro.github.io/IMCalc/" target="_blank">
+<a href="https://countdownjsevemon.netlify.app/" target="_blank">
 Click here to test !</a>
 
 ## 🎨 Interface
